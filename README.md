@@ -1,4 +1,4 @@
-# 🐍 Snake Game - Servicio Telemático Web Containerizado
+# 🐍 Snake Docker - Servicio Telemático Web Containerizado
 
 Servicio web telemático profesional del clásico juego Snake, completamente containerizado con Docker y servido a través de Nginx. Implementado como proyecto de telemática siguiendo principios de desarrollo continuo y despliegue en producción.
 
@@ -40,10 +40,10 @@ Este proyecto implementa un servicio web escalable usando contenedores Docker, c
 
 ```bash
 # Clonar el repositorio desde GitHub
-git clone https://github.com/TU-USUARIO/snake-game.git
+git clone https://github.com/TU-USUARIO/snake-docker.git
 
 # Entrar al directorio del proyecto
-cd snake-game
+cd snake-docker
 ```
 
 ### Paso 2: Construcción y Despliegue Automatizado
@@ -104,23 +104,23 @@ Si prefieres usar Docker directamente:
 
 ```bash
 # 1. Construir la imagen desde el Dockerfile
-docker build -t snake-game:latest .
+docker build -t snake-docker:latest .
 
 # 2. Ejecutar el contenedor en producción
 docker run -d \
-  --name snake-game-container \
+  --name snake-docker-container \
   --restart unless-stopped \
   -p 8080:80 \
-  snake-game:latest
+  snake-docker:latest
 
 # 3. Verificar el despliegue
-docker logs snake-game-container
+docker logs snake-docker-container
 
 # 4. Gestión del contenedor
-docker stop snake-game-container      # Detener
-docker start snake-game-container     # Iniciar
-docker restart snake-game-container   # Reiniciar
-docker rm snake-game-container        # Eliminar (primero detener)
+docker stop snake-docker-container      # Detener
+docker start snake-docker-container     # Iniciar
+docker restart snake-docker-container   # Reiniciar
+docker rm snake-docker-container        # Eliminar (primero detener)
 ```
 
 ## 🔒 Consideraciones de Seguridad para Producción
@@ -138,7 +138,7 @@ El servicio puede escalarse fácilmente:
 
 ```bash
 # Escalar a múltiples instancias
-docker-compose up -d --scale snake-game=3
+docker-compose up -d --scale snake-docker=3
 
 # Con balanceador de carga (requiere configuración adicional)
 # Se puede usar nginx como load balancer o Docker Swarm
@@ -166,7 +166,7 @@ docker-compose up -d --scale snake-game=3
 ## 📁 Estructura del Proyecto
 
 ```
-snake-game/
+snake-docker/
 ├── index.html          # Interfaz HTML5 del servicio web
 ├── style.css           # Estilos CSS3 y animaciones
 ├── game.js             # Lógica JavaScript del cliente
@@ -186,7 +186,7 @@ snake-game/
                │ HTTP Request
                ▼
 ┌─────────────────────────────────────┐
-│  Docker Container                   │
+│  Snake-Docker Container             │
 │  ┌───────────────────────────────┐  │
 │  │  Nginx Web Server (Alpine)    │  │
 │  │  - Sirve archivos estáticos   │  │
@@ -342,8 +342,8 @@ El servicio está completamente funcional y listo para ser desplegado en cualqui
 
 **Comandos rápidos para producción:**
 ```bash
-git clone https://github.com/TU-USUARIO/snake-game.git
-cd snake-game
+git clone https://github.com/TU-USUARIO/snake-docker.git
+cd snake-docker
 docker-compose up -d --build
 ```
 

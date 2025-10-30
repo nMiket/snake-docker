@@ -1,18 +1,18 @@
 version: '3.8'
 
 services:
-  snake-game:
+  snake-docker:
     build: .
-    container_name: snake-game-container
+    container_name: snake-docker-container
     ports:
       - "8080:80"
     restart: unless-stopped
     networks:
-      - snake-network
+      - snake-docker-network
     labels:
-      - "description=Snake Game Web Application"
+      - "description=Snake Docker Web Application"
       - "version=1.0"
 
 networks:
-  snake-network:
+  snake-docker-network:
     driver: bridge

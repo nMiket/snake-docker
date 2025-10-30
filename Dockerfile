@@ -13,8 +13,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 
 # Etiquetas de metadata
-LABEL maintainer="Snake Game"
-LABEL description="Juego de Snake con interfaz web moderna"
+LABEL maintainer="Snake Docker"
+LABEL description="Servicio telemático Snake con Docker"
 LABEL version="1.0"
 
 # El comando por defecto de nginx ya está en la imagen base
