@@ -1,10 +1,13 @@
 # 🐍 Snake Docker
 
 Juego Snake clásico servido a través de Docker y Nginx.
-Examen docker telematica
-por: Andres Felipe Martinez Taborda
 
-## � Cómo ejecutar el proyecto
+**Examen docker telematica**  
+**Por:** Andres Felipe Martinez Taborda
+
+![Vista del juego](imagenes%20funcionamiento/Vista%20del%20juego%20en%20localhost.jpg)
+
+## 🚀 Cómo ejecutar el proyecto
 
 Ejecuta estos comandos en tu terminal de Linux:
 
@@ -14,6 +17,8 @@ cd snake-docker
 sudo docker build -t snake-docker:latest .
 sudo docker run -d -p 80:80 snake-docker:latest
 ```
+
+![Comandos de ejecución](imagenes%20funcionamiento/Comandos%20de%20ejecucion.jpg)
 
 Luego abre tu navegador en: **http://localhost**
 
